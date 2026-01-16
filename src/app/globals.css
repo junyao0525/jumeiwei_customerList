@@ -24,3 +24,46 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+/* Smooth transitions for dashboard */
+* {
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+
+/* Darker placeholder color */
+input::placeholder,
+textarea::placeholder {
+  color: rgb(107 114 128) !important; /* gray-500 - darker than default */
+  opacity: 1;
+}
+
+/* Darker text for select elements */
+select {
+  color: rgb(17 24 39) !important; /* gray-900 - dark text */
+}
+
+/* Darker text for option elements */
+option {
+  color: rgb(17 24 39) !important; /* gray-900 - dark text */
+  background-color: white;
+}
+
+/* Darker table header text */
+thead th {
+  color: rgb(17 24 39) !important; /* gray-900 - dark text */
+  font-weight: 600;
+}
+
+/* Darker table body text (numbers, dates, etc.) */
+tbody td {
+  color: rgb(17 24 39) !important; /* gray-900 - dark text */
+}
+
+/* Darker input text for numbers and dates */
+input[type="number"],
+input[type="date"],
+input[type="text"] {
+  color: rgb(17 24 39) !important; /* gray-900 - dark text */
+}
